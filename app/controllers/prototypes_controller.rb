@@ -34,7 +34,7 @@ class PrototypesController < ApplicationController
 
   def update
     if @prototype.update(prototype_params)
-      redirect_to root_path, notice: 'プロトタイプが更新されました'
+      redirect_to prototype_path
     else
       render :edit, status: :unprocessable_entity
     end
